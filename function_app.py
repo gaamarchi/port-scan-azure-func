@@ -6,7 +6,7 @@ import socket
 
 app = func.FunctionApp()
 
-@app.route(route="services", auth_level=func.AuthLevel.ANONYMOUS)
+@app.route(route="http_trigger", auth_level=func.AuthLevel.FUNCTION)
 def services(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
